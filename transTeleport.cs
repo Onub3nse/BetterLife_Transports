@@ -11,6 +11,7 @@ using Mafi.Core.Prototypes;
 using System;
 using System.Reflection;
 using System.Text;
+using static Mafi.Base.Assets.Core;
 
 namespace BetterLife_Transports
 {
@@ -31,10 +32,10 @@ namespace BetterLife_Transports
             //registrator.PrototypesDb.TryRemove(Ids.IoPortShapes.MoltenMetalChannel);
             //registrator.PrototypesDb.TryRemove(Ids.IoPortShapes.Shaft);
 
-            var disconnectedField1 = shapeFlat.Graphics.GetType().GetField("DisconnectedPortPrefabPath", BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.Public);
-            disconnectedField1.SetValue(shapeFlat.Graphics, "Assets/BetterLife/Transports/ports/port.prefab");
-            var disconnectedField2 = shapeFlat.Graphics.GetType().GetField("DisconnectedPortPrefabPathLod3", BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.Public);
-            disconnectedField2.SetValue(shapeFlat.Graphics, "Assets/BetterLife/Transports/ports/port.prefab");
+            //var disconnectedField1 = shapeFlat.Graphics.GetType().GetField("DisconnectedPortPrefabPath", BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.Public);
+            //disconnectedField1.SetValue(shapeFlat.Graphics, "Assets/BetterLife/Transports/ports/port.prefab");
+            //var disconnectedField2 = shapeFlat.Graphics.GetType().GetField("DisconnectedPortPrefabPathLod3", BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.Public);
+            //disconnectedField2.SetValue(shapeFlat.Graphics, "Assets/BetterLife/Transports/ports/port.prefab");
 
 
             // Mafi Original
@@ -91,29 +92,6 @@ namespace BetterLife_Transports
             //    transportFlat.ConstructionDurationPerProduct,
             //    transportFlat.Graphics);
             //registrator.PrototypesDb.Add(mTransportFlat);
-
-
-
-
-
-
-
-            string[] transPORT10 =
-            {
-                            "-6-                        -6-"
-                        };
-            string[] transPORT20 =
-            { //"111222333444555666777888999000111222333444555666777888999000"
-                            "-6-                                                      -6-"
-                        };
-            string[] transPORT100 =
-            { //"111222333444555666777888999000111222333444555666777888999000111222333444555666777888999000111222333444555666777888999000111222333444555666777888999000"
-                            "-6-                                                                                                                                                -6-"
-                        };
-            string[] transFIX =
-            {
-                                        "-1-"
-                        };
             string[] balancer0 =
             {
                                         "-1-"
@@ -533,9 +511,70 @@ namespace BetterLife_Transports
                     BetterLIDs.transPorts.AddTransBar(prevProto2.Id);
                 }
             }
+            pillarEntityProto pillar5proto = CreateStaticProto(registrator, BetterLIDs.transPorts.transPillar5, "Pillar 5h", balancer0, BLCosts.Buildings.pillars,
+                BetterLIDs.dPath.transPortPillar5.asset, BetterLIDs.dPath.transPortPillar5.icon,
+                BetterLIDs.ToolBars.HiddenProto, 0, 0, 0, null);
+            pillarEntityProto pillar4proto = CreateStaticProto(registrator, BetterLIDs.transPorts.transPillar4, "Pillar 4h", balancer0, BLCosts.Buildings.pillars,
+                BetterLIDs.dPath.transPortPillar4.asset, BetterLIDs.dPath.transPortPillar4.icon,
+                BetterLIDs.ToolBars.HiddenProto, 0, 0, 0, pillar5proto);
+            pillarEntityProto pillar3proto = CreateStaticProto(registrator, BetterLIDs.transPorts.transPillar3, "Pillar 3h", balancer0, BLCosts.Buildings.pillars,
+                BetterLIDs.dPath.transPortPillar3.asset, BetterLIDs.dPath.transPortPillar3.icon,
+                BetterLIDs.ToolBars.TransPort_Pillars, 0, 0, 0, pillar4proto);
+
+            registrator.PrototypesDb.Add<pillarEntityProto>(pillar5proto);
+            registrator.PrototypesDb.Add<pillarEntityProto>(pillar4proto);
+            registrator.PrototypesDb.Add<pillarEntityProto>(pillar3proto);
+
         }
 
+        public  pillarEntityProto CreateStaticProto(ProtoRegistrator registrato, StaticEntityProto.ID id, string coment, string[] el, EntityCostsTpl ecTpl, string asp, string ico, Proto.ID cat, Fix32 nX, Fix32 nY, Fix32 nZ, pillarEntityProto tier)
+        {
+            Predicate<LayoutTile> predicate = null;
+            CustomLayoutToken[] array = new CustomLayoutToken[1];
+            array[0] = new CustomLayoutToken("-0-", delegate (EntityLayoutParams p, int h)
+            {
+                return new LayoutTokenSpec(0, h);
+            });
 
+            EntityLayoutParams entityLayoutParams = new EntityLayoutParams(predicate, array, false, null, null, null, null, null, null, default);
+            string[] initLayoutString = el;
+            EntityLayout ltemp = registrato.LayoutParser.ParseLayoutOrThrow(entityLayoutParams, el);
+            EntityLayout entLayout = new EntityLayout(el.ToString(), ltemp.LayoutTiles, ltemp.TerrainVertices, null, entityLayoutParams, ltemp.CollapseVerticesThreshold, null);
+            Proto.Str ps1 = Proto.CreateStr(id, coment);
+            EntityCosts ec1 = ecTpl.MapToEntityCosts(registrato);
+            
+            if (cat != BetterLIDs.ToolBars.HiddenProto)
+            {
+                    LayoutEntityProto.Gfx lg1 = new LayoutEntityProto.Gfx
+                    (
+                        prefabPath: asp,
+                        prefabOrigin: new RelTile3f(nX, nY, nZ),
+                        customIconPath: ico,
+                        categories: registrato.GetCategoriesProtos(cat),
+                        hideBlockedPortsIcon: true
+                    );
+                pillarEntityProto regProto = new pillarEntityProto(id, ps1, entLayout, ec1, lg1, null);
+                if (tier != null) regProto.SetNextTierIndirect<pillarEntityProto>(tier, false);
+                regProto.AddParam(new DrawArrowWileBuildingProtoParam(2f));
+                return regProto;
+            }
+            else
+            {
+                   LayoutEntityProto.Gfx lg1 = new LayoutEntityProto.Gfx
+                    (
+                        prefabPath: asp,
+                        prefabOrigin: new RelTile3f(nX, nY, nZ),
+                        customIconPath: ico,
+                        categories: ImmutableArray<ToolbarEntryData>.Empty,
+                        hideBlockedPortsIcon: true
+                    );
+                pillarEntityProto regProto = new pillarEntityProto(id, ps1, entLayout, ec1, lg1, null);
+                if (tier != null) regProto.SetNextTierIndirect<pillarEntityProto>(tier, false);
+                regProto.AddParam(new DrawArrowWileBuildingProtoParam(2f));
+                return regProto;
+            }
+
+        }
 
         public blZipperProto CreateProto(ProtoRegistrator registrato, StaticEntityProto.ID id, string coment, string[] el, EntityCostsTpl ecTpl, string asp, string ico, Proto.ID cat, Fix32 nX, Fix32 nY, Fix32 nZ, bool isRamp, IoPortTemplate[] ports, bool locked, blZipperProto tier)
         {
@@ -596,7 +635,7 @@ namespace BetterLife_Transports
                     hideBlockedPortsIcon: true
                 );
                 blZipperProto regProto = new blZipperProto(id, ps1, entLayout, ec1, Electricity.OneKw, true, lg1);
-                if (tier != null) regProto.SetNextTierIndirect<blZipperProto>(tier, false, false);
+                if (tier != null) regProto.SetNextTierIndirect<blZipperProto>(tier, false);
 
                 regProto.AddParam(new DrawArrowWileBuildingProtoParam(2f));
                 registrato.PrototypesDb.Add<blZipperProto>(regProto);

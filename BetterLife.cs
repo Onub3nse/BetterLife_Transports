@@ -25,7 +25,7 @@ using UnityEngine;
 //using static UnityEngine.UI.Image;
 namespace BetterLife_Transports
 {
-    public sealed class BetterLife : IDisposable, IMod, IModConfig
+    public sealed class BetterLife_Transports : IDisposable, IMod, IModConfig
     {
         public readonly Harmony HarmonyInstance;
         private ModManifest manifest;
@@ -57,14 +57,14 @@ namespace BetterLife_Transports
         {
             get
             {
-                return typeof(BetterLife).Assembly.GetName().Version;
+                return typeof(BetterLife_Transports).Assembly.GetName().Version;
             }
         }
         public string Name
         {
             get
             {
-                return typeof(BetterLife).Assembly.GetName().Name;
+                return typeof(BetterLife_Transports).Assembly.GetName().Name;
             }
         }
 
@@ -74,7 +74,7 @@ namespace BetterLife_Transports
         {
             get
             {
-                return typeof(BetterLife).Assembly.GetName().Version.Major * 100 + typeof(BetterLife).Assembly.GetName().Version.Minor * 10 + typeof(BetterLife).Assembly.GetName().Version.Build;
+                return typeof(BetterLife_Transports).Assembly.GetName().Version.Major * 100 + typeof(BetterLife_Transports).Assembly.GetName().Version.Minor * 10 + typeof(BetterLife_Transports).Assembly.GetName().Version.Build;
             }
         }
 
@@ -87,7 +87,7 @@ namespace BetterLife_Transports
             }
         }
 
-        public BetterLife(ModManifest modManifest)
+        public BetterLife_Transports(ModManifest modManifest)
 
         {
             this.manifest = modManifest;
@@ -104,14 +104,15 @@ namespace BetterLife_Transports
         {
             ProtosDb prototypesDb = registrator.PrototypesDb;
 
-            ToolbarCategoryProto transPortsParent = new ToolbarCategoryProto(BetterLIDs.ToolBars.TransPORTparent, Proto.CreateStr(BetterLIDs.ToolBars.TransPORT, "transPORT", null, null), 110f, "Assets/BetterLife/Icons/TransportIcons/transPORT.png", false, "TRANSPORTS", null, null, null);
-            ToolbarCategoryProto balancersParent = new ToolbarCategoryProto(BetterLIDs.ToolBars.Balancers, Proto.CreateStr(BetterLIDs.ToolBars.Balancers, "Balancers", null, null), 110f, "Assets/BetterLife/Icons/TransportIcons/balancers/balancer3.png", false, "tBALANCERS", null, null, transPortsParent);
-            ToolbarCategoryProto balancersFlat = new ToolbarCategoryProto(BetterLIDs.ToolBars.Balancers_Flat, Proto.CreateStr(BetterLIDs.ToolBars.Balancers_Flat, "Flat", null, null), 110f, "Assets/BetterLife/Icons/Toolbar/toolbar_small_flat.png", false, "tBALANCERSFLAT", null, null, transPortsParent);
-            ToolbarCategoryProto balancersLoose = new ToolbarCategoryProto(BetterLIDs.ToolBars.Balancers_Loose, Proto.CreateStr(BetterLIDs.ToolBars.Balancers_Loose, "Loose", null, null), 110f, "Assets/BetterLife/Icons/Toolbar/toolbar_small_loose.png", false, "tBALANCERSLOOSE", null, null, transPortsParent);
-            ToolbarCategoryProto balancerspipe = new ToolbarCategoryProto(BetterLIDs.ToolBars.Balancers_Pipe, Proto.CreateStr(BetterLIDs.ToolBars.Balancers_Pipe, "Pipe", null, null), 110f, "Assets/BetterLife/Icons/Toolbar/toolbar_small_pipe.png", false, "tBALANCERSPIPE", null, null, transPortsParent);
-            ToolbarCategoryProto balancersmolten = new ToolbarCategoryProto(BetterLIDs.ToolBars.Balancers_Molten, Proto.CreateStr(BetterLIDs.ToolBars.Balancers_Molten, "Molten", null, null), 110f, "Assets/BetterLife/Icons/Toolbar/toolbar_small_molten.png", false, "tBALANCERSMOLTEN", null, null, transPortsParent);
-            ToolbarCategoryProto balancersshaft = new ToolbarCategoryProto(BetterLIDs.ToolBars.Balancers_Shaft, Proto.CreateStr(BetterLIDs.ToolBars.Balancers_Shaft, "Shaft", null, null), 110f, "Assets/BetterLife/Icons/Toolbar/toolbar_small_shaft.png", false, "tBALANCERSSHSAFT", null, null, transPortsParent);
-            ToolbarCategoryProto transBars = new ToolbarCategoryProto(BetterLIDs.ToolBars.TransBars, Proto.CreateStr(BetterLIDs.ToolBars.Balancers_Shaft, "Transport BARS", null, null), 110f, "Assets/BetterLife/Icons/TransportIcons/balancers/balancer3.png", false, "transPortBars", null, null, transPortsParent);
+            ToolbarCategoryProto transPortsParent = new ToolbarCategoryProto(BetterLIDs.ToolBars.TransPORTparent, Proto.CreateStr(BetterLIDs.ToolBars.TransPORT, "transPORT", null, null), 110f, "Assets/BetterLife/Icons_Transport/Toolbar_TransPortIcons/transPORT.png", false, "", null, null, null);
+            ToolbarCategoryProto balancersParent = new ToolbarCategoryProto(BetterLIDs.ToolBars.Balancers, Proto.CreateStr(BetterLIDs.ToolBars.Balancers, "Balancers", null, null), 110f, "Assets/BetterLife/Icons_Transport/TransportIcons/balancers/balancer3.png", false, "", null, null, transPortsParent);
+            ToolbarCategoryProto balancersFlat = new ToolbarCategoryProto(BetterLIDs.ToolBars.Balancers_Flat, Proto.CreateStr(BetterLIDs.ToolBars.Balancers_Flat, "Flat", null, null), 110f, "Assets/BetterLife/Icons_Transport/Toolbar_TransPortIcons/toolbar_small_flat.png", false, "", null, null, transPortsParent);
+            ToolbarCategoryProto balancersLoose = new ToolbarCategoryProto(BetterLIDs.ToolBars.Balancers_Loose, Proto.CreateStr(BetterLIDs.ToolBars.Balancers_Loose, "Loose", null, null), 110f, "Assets/BetterLife/Icons_Transport/Toolbar_TransPortIcons/toolbar_small_loose.png", false, "", null, null, transPortsParent);
+            ToolbarCategoryProto balancerspipe = new ToolbarCategoryProto(BetterLIDs.ToolBars.Balancers_Pipe, Proto.CreateStr(BetterLIDs.ToolBars.Balancers_Pipe, "Pipe", null, null), 110f, "Assets/BetterLife/Icons_Transport/Toolbar_TransPortIcons/toolbar_small_pipe.png", false, "", null, null, transPortsParent);
+            ToolbarCategoryProto balancersmolten = new ToolbarCategoryProto(BetterLIDs.ToolBars.Balancers_Molten, Proto.CreateStr(BetterLIDs.ToolBars.Balancers_Molten, "Molten", null, null), 110f, "Assets/BetterLife/Icons_Transport/Toolbar_TransPortIcons/toolbar_small_molten.png", false, "", null, null, transPortsParent);
+            ToolbarCategoryProto balancersshaft = new ToolbarCategoryProto(BetterLIDs.ToolBars.Balancers_Shaft, Proto.CreateStr(BetterLIDs.ToolBars.Balancers_Shaft, "Shaft", null, null), 110f, "Assets/BetterLife/Icons_Transport/Toolbar_TransPortIcons/toolbar_small_shaft.png", false, "", null, null, transPortsParent);
+            ToolbarCategoryProto transBars = new ToolbarCategoryProto(BetterLIDs.ToolBars.TransBars, Proto.CreateStr(BetterLIDs.ToolBars.Balancers_Shaft, "Transport BARS", null, null), 110f, "Assets/BetterLife/Icons_Transport/TransportIcons/balancers/balancer3.png", false, "", null, null, transPortsParent);
+            ToolbarCategoryProto transPillars = new ToolbarCategoryProto(BetterLIDs.ToolBars.TransPort_Pillars, Proto.CreateStr(BetterLIDs.ToolBars.TransPort_Pillars, "Transport Pillars", null, null), 110f, "Assets/BetterLife/Icons_Transport/Toolbar_TransPortIcons/toolbar_transPillars.png", false, "", null, null, transPortsParent);
             prototypesDb.Add<ToolbarCategoryProto>(transPortsParent, false);
             prototypesDb.Add<ToolbarCategoryProto>(balancersParent, false);
             prototypesDb.Add<ToolbarCategoryProto>(balancersFlat, false);
@@ -120,15 +121,16 @@ namespace BetterLife_Transports
             prototypesDb.Add<ToolbarCategoryProto>(balancersmolten, false);
             prototypesDb.Add<ToolbarCategoryProto>(balancersshaft, false);
             prototypesDb.Add<ToolbarCategoryProto>(transBars, false);
+            prototypesDb.Add<ToolbarCategoryProto>(transPillars, false);
 
             //registrator.RegisterData<productData>();
 
             registrator.RegisterData<transTeleport>();
-
+ 
             //registrator.RegisterData<Bridges>();
-
+             
             registrator.RegisterDataWithInterface<IResearchNodesData>();
-
+              
         }
         public bool GameWasLoaded;
         private bool disposedValue;
@@ -141,7 +143,7 @@ namespace BetterLife_Transports
 
 
         }
-
+         
         public void Initialize(DependencyResolver resolver, bool gameWasLoaded)
         {
             GameWasLoaded = gameWasLoaded;

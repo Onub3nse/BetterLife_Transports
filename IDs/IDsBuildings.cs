@@ -27,73 +27,73 @@ namespace BetterLife_Transports
             public string asset { get; set; }
             public string icon { get; set; }
              
-            public static dPath balancer0_flat = new dPath("Assets/BetterLife/Transports/balancer0/balancer0Flat.prefab", "Assets/BetterLife/Icons/TransportIcons/balancerflat/balancer0flat.png");
-            public static dPath balancer1_flat = new dPath("Assets/BetterLife/Transports/balancer1/balancer1flat.prefab", "Assets/BetterLife/Icons/TransportIcons/balancerflat/balancer0flat.png");
-            public static dPath balancer2_flat = new dPath("Assets/BetterLife/Transports/balancer2/balancer2flat.prefab", "Assets/BetterLife/Icons/TransportIcons/balancerflat/balancer0flat.png");
-            public static dPath balancer3_flat = new dPath("Assets/BetterLife/Transports/balancer3/balancer3flat.prefab", "Assets/BetterLife/Icons/TransportIcons/balancerflat/balancer0flat.png");
-            public static dPath balancer4_flat = new dPath("Assets/BetterLife/Transports/balancer4/balancer4flat.prefab", "Assets/BetterLife/Icons/TransportIcons/balancerflat/balancer0flat.png");
-            public static dPath balancer5_flat = new dPath("Assets/BetterLife/Transports/balancer5/balancer5flat.prefab", "Assets/BetterLife/Icons/TransportIcons/balancerflat/balancer0flat.png");
+            public static dPath balancer0_flat = new dPath("Assets/BetterLife/Transports/balancer0/balancer0Flat.prefab", "Assets/BetterLife/Icons_Transport/TransportIcons/balancerflat/balancer0flat.png");
+            public static dPath balancer1_flat = new dPath("Assets/BetterLife/Transports/balancer1/balancer1flat.prefab", "Assets/BetterLife/Icons_Transport/TransportIcons/balancerflat/balancer0flat.png");
+            public static dPath balancer2_flat = new dPath("Assets/BetterLife/Transports/balancer2/balancer2flat.prefab", "Assets/BetterLife/Icons_Transport/TransportIcons/balancerflat/balancer0flat.png");
+            public static dPath balancer3_flat = new dPath("Assets/BetterLife/Transports/balancer3/balancer3flat.prefab", "Assets/BetterLife/Icons_Transport/TransportIcons/balancerflat/balancer0flat.png");
+            public static dPath balancer4_flat = new dPath("Assets/BetterLife/Transports/balancer4/balancer4flat.prefab", "Assets/BetterLife/Icons_Transport/TransportIcons/balancerflat/balancer0flat.png");
+            public static dPath balancer5_flat = new dPath("Assets/BetterLife/Transports/balancer5/balancer5flat.prefab", "Assets/BetterLife/Icons_Transport/TransportIcons/balancerflat/balancer0flat.png");
 
-            public static dPath balancer0_loose = new dPath("Assets/BetterLife/Transports/balancer0/balancer0loose.prefab", "Assets/BetterLife/Icons/TransportIcons/balancerloose/balancer0loose.png");
-            public static dPath balancer1_loose = new dPath("Assets/BetterLife/Transports/balancer1/balancer1loose.prefab", "Assets/BetterLife/Icons/TransportIcons/balancerloose/balancer1loose.png");
-            public static dPath balancer2_loose = new dPath("Assets/BetterLife/Transports/balancer2/balancer2loose.prefab", "Assets/BetterLife/Icons/TransportIcons/balancerloose/balancer2loose.png");
-            public static dPath balancer3_loose = new dPath("Assets/BetterLife/Transports/balancer3/balancer3loose.prefab", "Assets/BetterLife/Icons/TransportIcons/balancerloose/balancer3loose.png");
-            public static dPath balancer4_loose = new dPath("Assets/BetterLife/Transports/balancer4/balancer4loose.prefab", "Assets/BetterLife/Icons/TransportIcons/balancerloose/balancer4loose.png");
-            public static dPath balancer5_loose = new dPath("Assets/BetterLife/Transports/balancer5/balancer5loose.prefab", "Assets/BetterLife/Icons/TransportIcons/balancerloose/balancer5loose.png");
+            public static dPath balancer0_loose = new dPath("Assets/BetterLife/Transports/balancer0/balancer0loose.prefab", "Assets/BetterLife/Icons_Transport/TransportIcons/balancerloose/balancer0loose.png");
+            public static dPath balancer1_loose = new dPath("Assets/BetterLife/Transports/balancer1/balancer1loose.prefab", "Assets/BetterLife/Icons_Transport/TransportIcons/balancerloose/balancer1loose.png");
+            public static dPath balancer2_loose = new dPath("Assets/BetterLife/Transports/balancer2/balancer2loose.prefab", "Assets/BetterLife/Icons_Transport/TransportIcons/balancerloose/balancer2loose.png");
+            public static dPath balancer3_loose = new dPath("Assets/BetterLife/Transports/balancer3/balancer3loose.prefab", "Assets/BetterLife/Icons_Transport/TransportIcons/balancerloose/balancer3loose.png");
+            public static dPath balancer4_loose = new dPath("Assets/BetterLife/Transports/balancer4/balancer4loose.prefab", "Assets/BetterLife/Icons_Transport/TransportIcons/balancerloose/balancer4loose.png");
+            public static dPath balancer5_loose = new dPath("Assets/BetterLife/Transports/balancer5/balancer5loose.prefab", "Assets/BetterLife/Icons_Transport/TransportIcons/balancerloose/balancer5loose.png");
 
-            public static dPath balancer0_pipe = new dPath("Assets/BetterLife/Transports/balancer0/balancer0pipe.prefab", "Assets/BetterLife/Icons/TransportIcons/balancerPipe.png");
-            public static dPath balancer1_pipe = new dPath("Assets/BetterLife/Transports/balancer1/balancer1pipe.prefab", "Assets/BetterLife/Icons/TransportIcons/balancerPipe.png");
-            public static dPath balancer2_pipe = new dPath("Assets/BetterLife/Transports/balancer2/balancer2pipe.prefab", "Assets/BetterLife/Icons/TransportIcons/balancerPipe.png");
-            public static dPath balancer3_pipe = new dPath("Assets/BetterLife/Transports/balancer3/balancer3pipe.prefab", "Assets/BetterLife/Icons/TransportIcons/balancerPipe.png");
-            public static dPath balancer4_pipe = new dPath("Assets/BetterLife/Transports/balancer4/balancer4pipe.prefab", "Assets/BetterLife/Icons/TransportIcons/balancerPipe.png");
-            public static dPath balancer5_pipe = new dPath("Assets/BetterLife/Transports/balancer5/balancer5pipe.prefab", "Assets/BetterLife/Icons/TransportIcons/balancerPipe.png");
+            public static dPath balancer0_pipe = new dPath("Assets/BetterLife/Transports/balancer0/balancer0pipe.prefab", "Assets/BetterLife/Icons_Transport/TransportIcons/balancerPipe.png");
+            public static dPath balancer1_pipe = new dPath("Assets/BetterLife/Transports/balancer1/balancer1pipe.prefab", "Assets/BetterLife/Icons_Transport/TransportIcons/balancerPipe.png");
+            public static dPath balancer2_pipe = new dPath("Assets/BetterLife/Transports/balancer2/balancer2pipe.prefab", "Assets/BetterLife/Icons_Transport/TransportIcons/balancerPipe.png");
+            public static dPath balancer3_pipe = new dPath("Assets/BetterLife/Transports/balancer3/balancer3pipe.prefab", "Assets/BetterLife/Icons_Transport/TransportIcons/balancerPipe.png");
+            public static dPath balancer4_pipe = new dPath("Assets/BetterLife/Transports/balancer4/balancer4pipe.prefab", "Assets/BetterLife/Icons_Transport/TransportIcons/balancerPipe.png");
+            public static dPath balancer5_pipe = new dPath("Assets/BetterLife/Transports/balancer5/balancer5pipe.prefab", "Assets/BetterLife/Icons_Transport/TransportIcons/balancerPipe.png");
 
 
-            public static dPath balancer0_molten = new dPath("Assets/BetterLife/Transports/balancer0/balancer0molten.prefab", "Assets/BetterLife/Icons/TransportIcons/balancer0_molten.png");
-            public static dPath balancer1_molten = new dPath("Assets/BetterLife/Transports/balancer1/balancer1molten.prefab", "Assets/BetterLife/Icons/TransportIcons/balancer0_molten.png");
-            public static dPath balancer2_molten = new dPath("Assets/BetterLife/Transports/balancer2/balancer2molten.prefab", "Assets/BetterLife/Icons/TransportIcons/balancer0_molten.png");
-            public static dPath balancer3_molten = new dPath("Assets/BetterLife/Transports/balancer3/balancer3molten.prefab", "Assets/BetterLife/Icons/TransportIcons/balancer0_molten.png");
-            public static dPath balancer4_molten = new dPath("Assets/BetterLife/Transports/balancer4/balancer4molten.prefab", "Assets/BetterLife/Icons/TransportIcons/balancer0_molten.png");
-            public static dPath balancer5_molten = new dPath("Assets/BetterLife/Transports/balancer5/balancer5molten.prefab", "Assets/BetterLife/Icons/TransportIcons/balancer0_molten.png");
+            public static dPath balancer0_molten = new dPath("Assets/BetterLife/Transports/balancer0/balancer0molten.prefab", "Assets/BetterLife/Icons_Transport/TransportIcons/balancer0_molten.png");
+            public static dPath balancer1_molten = new dPath("Assets/BetterLife/Transports/balancer1/balancer1molten.prefab", "Assets/BetterLife/Icons_Transport/TransportIcons/balancer0_molten.png");
+            public static dPath balancer2_molten = new dPath("Assets/BetterLife/Transports/balancer2/balancer2molten.prefab", "Assets/BetterLife/Icons_Transport/TransportIcons/balancer0_molten.png");
+            public static dPath balancer3_molten = new dPath("Assets/BetterLife/Transports/balancer3/balancer3molten.prefab", "Assets/BetterLife/Icons_Transport/TransportIcons/balancer0_molten.png");
+            public static dPath balancer4_molten = new dPath("Assets/BetterLife/Transports/balancer4/balancer4molten.prefab", "Assets/BetterLife/Icons_Transport/TransportIcons/balancer0_molten.png");
+            public static dPath balancer5_molten = new dPath("Assets/BetterLife/Transports/balancer5/balancer5molten.prefab", "Assets/BetterLife/Icons_Transport/TransportIcons/balancer0_molten.png");
 
-            public static dPath balancer0_shaft = new dPath("Assets/BetterLife/Transports/balancer0/balancer0shaft.prefab", "Assets/BetterLife/Icons/TransportIcons/balancer0shaft.png");
-            public static dPath balancer1_shaft = new dPath("Assets/BetterLife/Transports/balancer1/balancer1shaft.prefab", "Assets/BetterLife/Icons/TransportIcons/balancer0shaft.png");
-            public static dPath balancer2_shaft = new dPath("Assets/BetterLife/Transports/balancer2/balancer2shaft.prefab", "Assets/BetterLife/Icons/TransportIcons/balancer0shaft.png");
-            public static dPath balancer3_shaft = new dPath("Assets/BetterLife/Transports/balancer3/balancer3shaft.prefab", "Assets/BetterLife/Icons/TransportIcons/balancer0shaft.png");
-            public static dPath balancer4_shaft = new dPath("Assets/BetterLife/Transports/balancer4/balancer4shaft.prefab", "Assets/BetterLife/Icons/TransportIcons/balancer0shaft.png");
-            public static dPath balancer5_shaft = new dPath("Assets/BetterLife/Transports/balancer5/balancer5shaft.prefab", "Assets/BetterLife/Icons/TransportIcons/balancer0shaft.png");
+            public static dPath balancer0_shaft = new dPath("Assets/BetterLife/Transports/balancer0/balancer0shaft.prefab", "Assets/BetterLife/Icons_Transport/TransportIcons/balancer0shaft.png");
+            public static dPath balancer1_shaft = new dPath("Assets/BetterLife/Transports/balancer1/balancer1shaft.prefab", "Assets/BetterLife/Icons_Transport/TransportIcons/balancer0shaft.png");
+            public static dPath balancer2_shaft = new dPath("Assets/BetterLife/Transports/balancer2/balancer2shaft.prefab", "Assets/BetterLife/Icons_Transport/TransportIcons/balancer0shaft.png");
+            public static dPath balancer3_shaft = new dPath("Assets/BetterLife/Transports/balancer3/balancer3shaft.prefab", "Assets/BetterLife/Icons_Transport/TransportIcons/balancer0shaft.png");
+            public static dPath balancer4_shaft = new dPath("Assets/BetterLife/Transports/balancer4/balancer4shaft.prefab", "Assets/BetterLife/Icons_Transport/TransportIcons/balancer0shaft.png");
+            public static dPath balancer5_shaft = new dPath("Assets/BetterLife/Transports/balancer5/balancer5shaft.prefab", "Assets/BetterLife/Icons_Transport/TransportIcons/balancer0shaft.png");
 
-            public static dPath loader1_flat = new dPath("Assets/BetterLife/Transports/loader1/loader1Flat.prefab", "Assets/BetterLife/Icons/TransportIcons/loader1Flat.png");
-            public static dPath loader1_loose = new dPath("Assets/BetterLife/Transports/loader1/loader1.prefab", "Assets/BetterLife/Icons/TransportIcons/loader_loose.png");
-            public static dPath loader1_pipe = new dPath("Assets/BetterLife/Transports/loader1/loader1.prefab", "Assets/BetterLife/Icons/TransportIcons/loader_pipe.png");
-            public static dPath loader1_molten = new dPath("Assets/BetterLife/Transports/loader1/loader1.prefab", "Assets/BetterLife/Icons/TransportIcons/loader_molten.png");
-            public static dPath loader1_shaft = new dPath("Assets/BetterLife/Transports/loader1/loader1.prefab", "Assets/BetterLife/Icons/TransportIcons/loader_shaft.png");
+            public static dPath loader1_flat = new dPath("Assets/BetterLife/Transports/loader1/loader1Flat.prefab", "Assets/BetterLife/Icons_Transport/TransportIcons/loader1Flat.png");
+            public static dPath loader1_loose = new dPath("Assets/BetterLife/Transports/loader1/loader1.prefab", "Assets/BetterLife/Icons_Transport/TransportIcons/loader_loose.png");
+            public static dPath loader1_pipe = new dPath("Assets/BetterLife/Transports/loader1/loader1.prefab", "Assets/BetterLife/Icons_Transport/TransportIcons/loader_pipe.png");
+            public static dPath loader1_molten = new dPath("Assets/BetterLife/Transports/loader1/loader1.prefab", "Assets/BetterLife/Icons_Transport/TransportIcons/loader_molten.png");
+            public static dPath loader1_shaft = new dPath("Assets/BetterLife/Transports/loader1/loader1.prefab", "Assets/BetterLife/Icons_Transport/TransportIcons/loader_shaft.png");
 
-            public static dPath transBar4flat = new dPath("Assets/BetterLife/Transports/transportbars/bar4m/tbar4flat.prefab", "Assets/BetterLife/Icons/TransportIcons/transbar4flat.png");
-            public static dPath transBar4loose = new dPath("Assets/BetterLife/Transports/transportbars/bar4m/tbar4flat.prefab", "Assets/BetterLife/Icons/TransportIcons/transbar4loose.png");
-            public static dPath transBar4pipe = new dPath("Assets/BetterLife/Transports/transportbars/bar10m/transportBar4flat.prefab", "Assets/BetterLife/Icons/TransportIcons/transbar4pipe.png");
-            public static dPath transBar4molten = new dPath("Assets/BetterLife/Transports/transportbars/bar10m/transportBar4flat.prefab", "Assets/BetterLife/Icons/TransportIcons/transbar4molten.png");
-            public static dPath transBar4shaft = new dPath("Assets/BetterLife/Transports/transportbars/bar10m/transportBar4flat.prefab", "Assets/BetterLife/Icons/TransportIcons/transbar4shaft.png");
-            public static dPath transBar10flat = new dPath("Assets/BetterLife/Transports/transportbars/bar10m/transportBar10flat.prefab", "Assets/BetterLife/Icons/TransportIcons/transbar4flat.png");
+            public static dPath transBar4flat = new dPath("Assets/BetterLife/Transports/transportbars/bar4m/tbar4flat.prefab", "Assets/BetterLife/Icons_Transport/TransportIcons/transbar4flat.png");
+            public static dPath transBar4loose = new dPath("Assets/BetterLife/Transports/transportbars/bar4m/tbar4flat.prefab", "Assets/BetterLife/Icons_Transport/TransportIcons/transbar4loose.png");
+            public static dPath transBar4pipe = new dPath("Assets/BetterLife/Transports/transportbars/bar10m/transportBar4flat.prefab", "Assets/BetterLife/Icons_Transport/TransportIcons/transbar4pipe.png");
+            public static dPath transBar4molten = new dPath("Assets/BetterLife/Transports/transportbars/bar10m/transportBar4flat.prefab", "Assets/BetterLife/Icons_Transport/TransportIcons/transbar4molten.png");
+            public static dPath transBar4shaft = new dPath("Assets/BetterLife/Transports/transportbars/bar10m/transportBar4flat.prefab", "Assets/BetterLife/Icons_Transport/TransportIcons/transbar4shaft.png");
+            public static dPath transBar10flat = new dPath("Assets/BetterLife/Transports/transportbars/bar10m/transportBar10flat.prefab", "Assets/BetterLife/Icons_Transport/TransportIcons/transbar4flat.png");
 
-            public static dPath meter1 = new dPath("Assets/BetterLife/Misc/Meter/meter1.prefab", "Assets/BetterLife/Icons/Misc/meter1.png");
-            public static dPath meter2 = new dPath("Assets/BetterLife/Misc/Meter/meter2.prefab", "Assets/BetterLife/Icons/Misc/meter2.png");
-            public static dPath meter3 = new dPath("Assets/BetterLife/Misc/Meter/meter3.prefab", "Assets/BetterLife/Icons/Misc/meter3.png");
-            public static dPath meter4 = new dPath("Assets/BetterLife/Misc/Meter/meter4.prefab", "Assets/BetterLife/Icons/Misc/meter4.png");
+            public static dPath meter1 = new dPath("Assets/BetterLife/Misc/Meter/meter1.prefab", "Assets/BetterLife/Icons_Transport/Misc/meter1.png");
+            public static dPath meter2 = new dPath("Assets/BetterLife/Misc/Meter/meter2.prefab", "Assets/BetterLife/Icons_Transport/Misc/meter2.png");
+            public static dPath meter3 = new dPath("Assets/BetterLife/Misc/Meter/meter3.prefab", "Assets/BetterLife/Icons_Transport/Misc/meter3.png");
+            public static dPath meter4 = new dPath("Assets/BetterLife/Misc/Meter/meter4.prefab", "Assets/BetterLife/Icons_Transport/Misc/meter4.png");
 
-            public static dPath sign_coi1 = new dPath("Assets/BetterLife/Signs/signcoi1.prefab", "Assets/BetterLife/Icons/Signs/coisign1.png");
-            public static dPath ind_light1 = new dPath("Assets/BetterLife/Misc/IndusLight1/IndLight1.prefab", "Assets/BetterLife/Icons/Misc/indLight1.png");
+            public static dPath sign_coi1 = new dPath("Assets/BetterLife/Signs/signcoi1.prefab", "Assets/BetterLife/Icons_Transport/Signs/coisign1.png");
+            public static dPath ind_light1 = new dPath("Assets/BetterLife/Misc/IndusLight1/IndLight1.prefab", "Assets/BetterLife/Icons_Transport/Misc/indLight1.png");
 
-            public static dPath sign_wrongWay = new dPath("Assets/BetterLife/Signs/Sign_WrongWay.prefab", "Assets/BetterLife/Icons/Signs/prohibidoelpaso.png");
-            public static dPath sign_directional1 = new dPath("Assets/BetterLife/Signs/Sign_BiDirectional.prefab", "Assets/BetterLife/Icons/Signs/DobleSentido2.png");
+            public static dPath sign_wrongWay = new dPath("Assets/BetterLife/Signs/Sign_WrongWay.prefab", "Assets/BetterLife/Icons_Transport/Signs/prohibidoelpaso.png");
+            public static dPath sign_directional1 = new dPath("Assets/BetterLife/Signs/Sign_BiDirectional.prefab", "Assets/BetterLife/Icons_Transport/Signs/DobleSentido2.png");
 
-            public static dPath transPORT20_flat = new dPath("Assets/BetterLife/Transports/transport20/transport20.prefab", "Assets/BetterLife/Icons/TransportIcons/transport20_flat.png");
+            public static dPath transPORT20_flat = new dPath("Assets/BetterLife/Transports/transport20/transport20.prefab", "Assets/BetterLife/Icons_Transport/TransportIcons/transport20_flat.png");
             public static dPath transPORT20_loose = new dPath("", "");
             public static dPath transPORT20_pipe = new dPath("", "");
             public static dPath transPORT20_molten = new dPath("", "");
             public static dPath transPORT20_shaft = new dPath("", "");
 
-            public static dPath transPORT40_flat = new dPath("Assets/BetterLife/Transports/transport40/transport40_flat.prefab", "Assets/BetterLife/Icons/TransportIcons/transport40_flat.png");
+            public static dPath transPORT40_flat = new dPath("Assets/BetterLife/Transports/transport40/transport40_flat.prefab", "Assets/BetterLife/Icons_Transport/TransportIcons/transport40_flat.png");
             public static dPath transPORT40_loose = new dPath("", "");
             public static dPath transPORT40_pipe = new dPath("", "");
             public static dPath transPORT40_molten = new dPath("", "");
@@ -105,10 +105,10 @@ namespace BetterLife_Transports
             public static dPath transPORT100_molten = new dPath("", "");
             public static dPath transPORT100_shaft = new dPath("", "");
 
-            public static dPath wall1type1 = new dPath("Assets/BetterLife/Walls/WallA/straight1.prefab", "Assets/BetterLife/Icons/Walls/WallA_Straight.png");
-            public static dPath wall1crosstype1 = new dPath("Assets/BetterLife/Walls/WallA/cross1.prefab", "Assets/BetterLife/Icons/Walls/WalLA_Cross.png");
-            public static dPath wall1teetype1 = new dPath("Assets/BetterLife/Walls/WallA/tee1.prefab", "Assets/BetterLife/Icons/Walls/WallA_Tee.png");
-            public static dPath wall1cornertype1 = new dPath("Assets/BetterLife/Walls/WallA/corner1.prefab", "Assets/BetterLife/Icons/Walls/WallA_Corner.png");
+            public static dPath transPortPillar3 = new dPath("Assets/BetterLife/Pillars_Transport/transPortPillar3.prefab", "Assets/BetterLife/Icons_Transport/Toolbar_TransPortIcons/toolbar_transPillars.png");
+            public static dPath transPortPillar4 = new dPath("Assets/BetterLife/Pillars_Transport/transPortPillar4.prefab", "Assets/BetterLife/Icons_Transport/Toolbar_TransPortIcons/toolbar_transPillars.png");
+            public static dPath transPortPillar5 = new dPath("Assets/BetterLife/Pillars_Transport/transPortPillar5.prefab", "Assets/BetterLife/Icons_Transport/Toolbar_TransPortIcons/toolbar_transPillars.png");
+
         }
 
 
@@ -219,6 +219,10 @@ namespace BetterLife_Transports
             public static readonly StaticEntityProto.ID balancer3shaft = new StaticEntityProto.ID("balancer3shaft");
             public static readonly StaticEntityProto.ID balancer4shaft = new StaticEntityProto.ID("balancer4shaft");
             public static readonly StaticEntityProto.ID balancer5shaft = new StaticEntityProto.ID("balancer5shaft");
+
+            public static readonly StaticEntityProto.ID transPillar3 = new StaticEntityProto.ID("transPillar3");
+            public static readonly StaticEntityProto.ID transPillar4 = new StaticEntityProto.ID("transPillar4");
+            public static readonly StaticEntityProto.ID transPillar5 = new StaticEntityProto.ID("transPillar5");
         }
         public partial class Buildings
         {

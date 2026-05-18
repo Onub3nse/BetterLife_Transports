@@ -23,6 +23,7 @@ namespace BetterLife_Transports
             public static readonly ToolbarID TransPort_Pipe = new ToolbarID("TransportPipe");
             public static readonly ToolbarID TransPort_Molten = new ToolbarID("TransportMolten");
             public static readonly ToolbarID TransPort_Shaft = new ToolbarID("TransportShaft");
+            public static readonly ToolbarID TransPort_Pillars = new ToolbarID("transportPillars");
         }
     }
 }

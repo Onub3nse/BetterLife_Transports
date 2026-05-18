@@ -37,6 +37,8 @@ namespace BetterLife
             return BLCosts.Build.MaintenanceT1(0).Priority(8).CP2(8 + (level * 2));
         }
 
+        
+
 
         public static class Machines
         {
@@ -70,6 +72,13 @@ namespace BetterLife
                 get
                 {
                     return BLCosts.Build.CP2(40).Product(10, Ids.Products.Potato);
+                }
+            }
+            public static EntityCostsTpl pillars
+            {
+                get
+                {
+                    return BLCosts.Build.CP(0);
                 }
             }
 

@@ -195,6 +195,7 @@ namespace BetterLife
             {Ids.Products.Potato,              new ColorRgba(102, 60, 18)},
             {Ids.Products.Quartz,              new ColorRgba(198, 206, 217)},
             {Ids.Products.QuartzCrushed,       new ColorRgba(182, 181, 164)},
+            {Ids.Products.RailParts,           new ColorRgba(182, 181, 181)},
             {Ids.Products.Recyclables,         new ColorRgba(129, 93, 60)},
             {Ids.Products.RecyclablesPressed,  new ColorRgba(145, 111, 42)},
             {Ids.Products.RetiredWaste,        new ColorRgba(166, 162, 150)},

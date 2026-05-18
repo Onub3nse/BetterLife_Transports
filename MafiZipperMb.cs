@@ -34,8 +34,8 @@ public class blZipperMbFactory : IEntityMbFactory<blZipper>, IFactory<blZipper, 
         blZipperMb trMb = gameObject.AddComponent<blZipperMb>();
         trMb.Initialize(balancerEnt, m_assetsDb, m_protoDb);
         //Log.Info("MB for transport created...");
-        return trMb;
-    }
+        return trMb; 
+    } 
 }
 public static class insideGOUtility
 {
@@ -359,7 +359,7 @@ public class blZipperMb : StaticEntityMb, IDestroyableEntityMb, IEntityMb, IEnti
         try
         {
             if (thisEntity == null)
-            {
+            { 
                 //Log.Info("thisEntity is null in SyncUpdate.");
                 return;
             }
@@ -367,11 +367,11 @@ public class blZipperMb : StaticEntityMb, IDestroyableEntityMb, IEntityMb, IEnti
             if (gameObjectMaterial == null)
             {
                 // Log.Info("gameObjectMaterial is null, cannot access mainTexture.");
-                return;
-            }
+                return; 
+            } 
             //Texture pMaterial = gameObjectMaterial.mainTexture;
             //Log.Info("checking color...");
-
+             
             if (thisEntity.newMyColor.Value > 0.0f)
             {
                 currentEmissionStrength = thisEntity.newMyColor.Value - 0.75f;

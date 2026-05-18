@@ -37,6 +37,10 @@
 
 	<ItemGroup>
 	  <Compile Remove="autoSign.cs" />
+	  <Compile Remove="BetterLifesMachineDef.cs" />
+	  <Compile Remove="MafiEntityMassPlacer.cs" />
+	  <Compile Remove="MafiEntityToolbox.cs" />
+	  <Compile Remove="Products.cs" />
 	  <Compile Remove="retainingWalls.cs" />
 	  <Compile Remove="RoadEntity.cs" />
 	  <Compile Remove="TerrainDef.cs" />
@@ -57,19 +61,19 @@
 		  <HintPath>0Harmony.dll</HintPath>
 		</Reference>
 		<Reference Include="Mafi">
-		  <HintPath>$(COI_ROOT)\Captain of Industry_Data\Managed\Mafi.dll</HintPath>
+		  <HintPath>E:\Games\SteamLibrary\steamapps\common\Captain of Industry\Captain of Industry_Data\Managed\Mafi.dll</HintPath>
 		</Reference>
 		<Reference Include="Mafi.Base">
-		  <HintPath>$(COI_ROOT)\Captain of Industry_Data\Managed\Mafi.Base.dll</HintPath>
+		  <HintPath>E:\Games\SteamLibrary\steamapps\common\Captain of Industry\Captain of Industry_Data\Managed\Mafi.Base.dll</HintPath>
 		</Reference>
 		<Reference Include="Mafi.Core">
-		  <HintPath>$(COI_ROOT)\Captain of Industry_Data\Managed\Mafi.Core.dll</HintPath>
+		  <HintPath>E:\Games\SteamLibrary\steamapps\common\Captain of Industry\Captain of Industry_Data\Managed\Mafi.Core.dll</HintPath>
 		</Reference>
 		<Reference Include="Mafi.Unity">
-		  <HintPath>$(COI_ROOT)\Captain of Industry_Data\Managed\Mafi.Unity.dll</HintPath>
+		  <HintPath>E:\Games\SteamLibrary\steamapps\common\Captain of Industry\Captain of Industry_Data\Managed\Mafi.Unity.dll</HintPath>
 		</Reference>
 		<Reference Include="Mafi.UnityCore">
-		  <HintPath>$(COI_ROOT)\Captain of Industry_Data\Managed\Mafi.UnityCore.dll</HintPath>
+		  <HintPath>E:\Games\SteamLibrary\steamapps\common\Captain of Industry\Captain of Industry_Data\Managed\Mafi.UnityCore.dll</HintPath>
 		</Reference>
 		<Reference Include="mscorlib">
 			<HintPath>$(COI_ROOT)\Captain of Industry_Data\Managed\mscorlib.dll</HintPath>
@@ -316,9 +320,7 @@
 	</Target>
 
 	<ProjectExtensions>
-		<VisualStudio>
-			<UserProperties manifest_1json__JsonSchema="manifest.schema.json" config_1json__JsonSchema="config.schema.json" />
-		</VisualStudio>
+		<VisualStudio><UserProperties manifest_1json__JsonSchema="manifest.schema.json" /></VisualStudio>
 	</ProjectExtensions>
   
 	<ItemGroup Condition=" '$(ProjectDir)' != '*Undefined*' ">
@@ -340,6 +342,7 @@
 		<Copy SourceFiles="$(ProjectDir)\config.json" DestinationFolder="$(COI_MODS)\$(TargetName)" ContinueOnError="true" />
 		<Copy SourceFiles="$(ProjectDir)\readme.txt" DestinationFolder="$(COI_MODS)\$(TargetName)" ContinueOnError="true" />
 		<Copy SourceFiles="$(ProjectDir)\Thumbnail.png" DestinationFolder="$(COI_MODS)\$(TargetName)" ContinueOnError="true" />
+		<Copy SourceFiles="$(ProjectDir)\changelog.txt" DestinationFolder="$(COI_MODS)\$(TargetName)" ContinueOnError="true" />
 		<Copy SourceFiles="$(TargetPath)" DestinationFolder="$(COI_MODS)\$(TargetName)\" />
 		<Copy SourceFiles="$(TargetDir)$(TargetName).pdb" DestinationFolder="$(COI_MODS)\$(TargetName)\" Condition="'$(Configuration)' == 'Debug'" />
 		<Copy SourceFiles="$(TargetDir)0Harmony.dll" DestinationFolder="$(COI_MODS)\$(TargetName)\" />

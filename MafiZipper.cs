@@ -3,6 +3,7 @@ using Mafi.Collections;
 using Mafi.Collections.ImmutableCollections;
 using Mafi.Collections.ReadonlyCollections;
 using Mafi.Core;
+using Mafi.Core.Economy;
 using Mafi.Core.Entities;
 using Mafi.Core.Entities.Priorities;
 using Mafi.Core.Entities.Static;
@@ -11,11 +12,14 @@ using Mafi.Core.Factory.ElectricPower;
 using Mafi.Core.Factory.MechanicalPower;
 using Mafi.Core.Factory.Zippers;
 using Mafi.Core.Input;
+using Mafi.Core.Population;
 using Mafi.Core.Ports;
 using Mafi.Core.Ports.Io;
 using Mafi.Core.PropertiesDb;
 using Mafi.Core.Prototypes;
 using Mafi.Core.Simulation;
+using Mafi.Core.Terrain;
+using Mafi.Core.Vehicles;
 using Mafi.Serialization;
 using Mafi.Unity.InputControl;
 using Mafi.Unity.Ports.Io;
@@ -165,12 +169,13 @@ namespace BetterLife
         private readonly IInputScheduler m_inputScheduler;
         private readonly ShortcutsManager m_shortcutsManager;
         private readonly IoPortsRenderer m_portsRenderer;
+        private readonly TerrainManager m_terrainManager;
         private EntitiesBuilder _entitiesBuilder;
         public IShaftManager _shaftManager;
         //private readonly LayoutEntityToolbox m_toolbox;
         //public event Action<Option<blZipperProto>> onProtoSelected;
         public blZipper(EntityId id, blZipperProto proto, TileTransform transform, EntityContext context, ISimLoopEvents simLoopEvents, ProductColorManager productColorManager,
-             UiContext uiContext, EntitiesBuilder entitiesBuilder, IShaftManager shaftManager)
+             UiContext uiContext, EntitiesBuilder entitiesBuilder, IShaftManager shaftManager, TerrainManager terrainManager)
             : base(id, proto, transform, context)
         {
             _shaftManager = shaftManager;
@@ -189,6 +194,7 @@ namespace BetterLife
             this.updateProperties();
             this.m_electricityConsumer = this.Context.ElectricityConsumerFactory.CreateConsumer((IElectricityConsumingEntity)this);
             this.recreateFastPorts();
+            this.m_terrainManager = terrainManager;
             //            this.m_toolbox.SetOnRotate(new Action(this.rotate));
             //uiContext.GameLoopEvents.SyncUpdate.AddNonSaveable(this, syncUpdate);
             _entitiesBuilder = entitiesBuilder;
@@ -207,22 +213,31 @@ namespace BetterLife
         protected override void OnAddedToWorld(EntityAddReason reason)
         {
             base.OnAddedToWorld(reason);
+             
 
             if (!Prototype.DoNotStartConstructionAutomatically)
             {
                 StartConstructionIfNotStarted();
             }
 
+            if (Prototype.Id.ToString().Contains("transBAR"))
+            {
+                Log.Info($"Balancer placed... : {this.Prototype.Id.ToString()}");
+                Log.Info($"{this.Prototype.Layout.LayoutSize.Z.ToString()}");
+                MakeFullyConstructed();
+                //m_constructionProgress.TryPerformQuickBuild(m_assetTransactionManager, m_upointsManager, m_vehicleBuffersRegistry);
+                     
+            }
             //string tit = DefaultTitle.Value;
             //IoPortTemplate[] newTemplate = null;
             //IoPort chkPort = null;
             //IoPort ourPort = null;
             //bool portfound = false;
             //Tile3i position = this.Position3f.Tile3i;
-
+             
             //foreach (IoPort pt in Ports)
             //{
-
+               
             //    chkPort = null;
 
             //    int di = pt.Direction.DirectionIndex;

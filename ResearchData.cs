@@ -17,6 +17,9 @@ namespace BetterLife_Transports
                 .AddLayoutEntityToUnlock(BetterLIDs.transPorts.balancer3flat)
                 .AddLayoutEntityToUnlock(BetterLIDs.transPorts.balancer3loose)
                 .AddLayoutEntityToUnlock(BetterLIDs.transPorts.balancer3pipe)
+                .AddLayoutEntityToUnlock(BetterLIDs.transPorts.transPillar3)
+                .AddLayoutEntityToUnlock(BetterLIDs.transPorts.transPillar4)
+                .AddLayoutEntityToUnlock(BetterLIDs.transPorts.transPillar5)
 
                 .AddRequiredProto(Ids.Research.Cp3Packing)
                 .AddRequirementForLifetimeProduction(Ids.Products.ConstructionParts2, 50)
